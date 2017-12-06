@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+tools:context="com.example.badow.iz_2_1.MainActivity">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:textAlignment="center"
+    android:textSize="30dp"
+    android:textColor="#4B0082"
+    android:text="Przelicznik Temperatury" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:textColor="#4B0082"
+        android:text="Celsjusz (C): " />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/eCelsjusz"
+        android:background="#00ff00"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:textColor="#4B0082"
+        android:text="Fahrenheit (F): " />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/eFahrenheit"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="#ff0000"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bPotwierdz"
+        android:text="OK!"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#4B0082"
+        android:background="#ffff00"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rbCelsjusz">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celsjusz"
+            android:textSize="20dp"
+            android:textColor="#4B0082"
+            android:id="@+id/rbCelsjusz"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:textSize="20dp"
+            android:textColor="#4B0082"
+            android:id="@+id/rbFahrenheit"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+</LinearLayout>
